@@ -2,6 +2,7 @@
   "name": "valentyn",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://hurumak.github.io/todolist/",
   "dependencies": {
     "@material-ui/core": "^4.10.1",
     "@material-ui/icons": "^4.9.1",
@@ -35,6 +36,8 @@
     ]
   },
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -85,6 +88,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^4.0.0",
     "husky": "^8.0.1",
     "jest-image-snapshot": "^4.0.2",
     "jest-puppeteer": "^4.4.0",

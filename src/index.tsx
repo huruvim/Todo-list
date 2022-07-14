@@ -6,10 +6,11 @@ import {App} from './features/Application';
 import {store} from './redux/store';
 import {Provider} from 'react-redux';
 import {BrowserRouter} from 'react-router-dom';
+import { repoName } from "./constants/privates";
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename={repoName}>
       <App />
     </BrowserRouter>
   </Provider>,
