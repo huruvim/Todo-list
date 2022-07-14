@@ -1,0 +1,14 @@
+name: CI flow
+on: [push]
+jobs:
+  Check-Tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Use Node.js 16.14.2
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.14.2
+      - run: yarn install --frozen-lockfile
+      - run: yarn test
