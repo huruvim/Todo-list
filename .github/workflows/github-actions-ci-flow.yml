@@ -12,3 +12,5 @@ jobs:
           node-version: 16.14.2
       - run: yarn install --frozen-lockfile
       - run: yarn test
+    env:
+      DISABLE_ESLINT_PLUGIN: true
